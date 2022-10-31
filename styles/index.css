@@ -2,17 +2,22 @@
 	box-sizing: border-box;
 }
 
+
 body {
 	font-family: "Montserrat", sans-serif;
 	margin: 0 auto;
 	background-color: white;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 .header {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100%;
+	width: 100vw;
 	height: 207px;
 }
 
@@ -29,17 +34,16 @@ body {
 	display: flex;
 	align-items: center;
 	max-width: 2440px;
-	width: 100vw;
-	justify-content: space-between;
-	overflow: hidden;
+	width: 100%;
+	justify-content: center;
 }
 
 .header-logo {
 	margin: 60px 120px 60px 160px;
-
 }
 
 .nav-list {
+	padding: 0;
 	list-style: none;
 	display: flex;
 	gap: 15px;
@@ -75,7 +79,7 @@ body {
 .burger {
 	margin-right: 205px;
 	margin-left: 165px;
-	justify-self: end;
+	/* justify-self: end; */
 }
 
 .nav-item {
@@ -106,6 +110,7 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	width: 100vw;
 }
 
 .about-logo {
@@ -121,6 +126,7 @@ body {
 	font-weight: 300;
 	font-size: 36px;
 	line-height: 145%;
+	margin: 0 auto;
 }
 
 .logo-title {
@@ -136,8 +142,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	width: 100%;
 	height: 767px;
+	width: 100%;
 	background-color: #F9F7F7;
 }
 
@@ -450,6 +456,7 @@ body {
 .insta-gallery {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .insta-gallery img {
@@ -457,10 +464,243 @@ body {
 	max-height: 304px;
 }
 
-.footer .container {
+.footer {
 	height: 92px;
-	width: 100vw;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+@media (max-width: 1200px) {
+
+	.header-wrapper {
+		max-width: 1200px;
+		justify-content: space-between;
+	}
+
+	.header-logo {
+		margin: 40px;
+	}
+
+	.burger {
+		margin-right: 40px;
+		margin-left: 40px;
+	}
+
+	.nav-list {
+		gap: 5px;
+		max-width: 500px;
+	}
+
+	.nav-item {
+		font-size: 10px;
+	}
+
+	.main {
+		margin-top: 167px;
+	}
+
+	.about-logo {
+		height: 300px;
+		margin-top: 60px;
+	}
+
+	.about-description_image img {
+		max-width: 750px;
+		max-height: 390px;
+		margin-bottom: 0;
+		margin-top: 60px;
+	}
+
+	.video-button {
+		top: 32%;
+		left: 46%;
+	}
+
+	.about-title {
+		font-size: 28px;
+	}
+
+	.description-main {
+		margin-left: 20px;
+		margin-right: 20px;
+		padding-left: 20px;
+	}
+
+	.description-goods {
+		gap: 10px;
+	}
+
+	.description-goods_item {
+		max-width: 220px;
+	}
+
+	.description-goods_item span {
+		font-size: 14px;
+		line-height: 120%;
+
+		margin-left: 26px;
+		margin-bottom: 20px;
+	}
+
+	.gallery {
+		margin-top: 60px;
+		margin-bottom: 60px;
+	}
+
+	.gallery-first-part {
+		flex-direction: column;
+		gap: 40px;
+	}
+
+	.gallery-second-part {
+		flex-direction: column;
+		gap: 40px;
+	}
+
+
+	.requests {
+		margin-top: 60px;
+		margin-bottom: 60px;
+		padding-left: 30px;
+
+	}
+
+	.requests_content {
+		flex-direction: column;
+		gap: 30px;
+	}
+
+	.info-blocks {
+		margin-top: 40px;
+	}
+
+	.info-restaurant,
+	.info-office {
+		gap: 10px;
+	}
+
+	.instagram-logo {
+		margin-top: 60px;
+		margin-bottom: 60px;
+	}
+
+	.insta-gallery {
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+	}
+
+	.insta-gallery img {
+		max-width: 300px;
+		max-height: 290px;
+	}
+}
+
+@media (max-width: 920px) { 
+
+	.header-wrapper {
+		max-width: 920px;
+		justify-content: space-between;
+	}
+
+	.header-logo {
+		margin: 20px;
+		width: 120px;
+		height: 64px;
+	}
+
+	.burger {
+		margin-right: 20px;
+		margin-left: 20px;
+	}
+
+	.nav-item {
+		font-size: 10px;
+	}
+
+	.main {
+		margin-top: 120px;
+	}
+
+	.slider-items img {
+		width: 400px;
+		height: 450px;
+	}
+
+	.about-logo {
+		margin-top: 60px;
+	}
+
+	.about-description {
+		height: 960px;
+	}
+
+	.about-description_content {
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		gap: 30px;
+		margin-top: -60px;
+	}
+
+	.description-goods {
+		align-items: center;
+		justify-content: space-around;
+	}
+
+	.description-goods_item {
+		max-width: 340px;
+	}
+
+	.requests {
+		margin-top: 40px;
+		margin-bottom: 40px;
+	}
+
+	.info-blocks {
+		margin-top: 40px;
+	}
+
+	.requests-info h1 {
+		font-size: 28px;
+		line-height: 135%;
+	}
+
+	.requests-form button {
+		margin-top: 20px;
+	}	
+
+	.gallery-first-part {
+		gap: 20px;
+	}
+
+	.gallery-second-part .column {
+		align-items: center;
+		justify-content: center;
+	}
+
+	.gallery-photos {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+	}
+
+	.instagram-logo {
+		margin-top: 40px;
+		margin-bottom: 40px;
+	}
+
+	.footer {
+		font-size: 12px;
+		height: 66px;
+	}
+}
+
+@media (max-width: 800px) { 
+	.nav-list {
+		display: none;
+	}
 }
